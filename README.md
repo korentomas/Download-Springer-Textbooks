@@ -1,4 +1,4 @@
-# Download Springer Textbooks by category
+# Download Springer textbooks by category
 We found out that Springer Publishing, a publisher specializing in books and academic journals, released more than 400 publications due to the global context. We thought it was great and wanted to contribute in our own way.
 
 We wanted to automatize the download for all textbooks so we decided to program an algortihm in python but we googled it and realized that **Joe T. Santhanavanich** published an article where he did this. In the comments we also found that **[@juanluisrto](https://gist.github.com/juanluisrto)** made some code to categorize the already downloaded files.

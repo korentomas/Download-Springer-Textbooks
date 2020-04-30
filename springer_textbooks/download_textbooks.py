@@ -3,7 +3,7 @@ import pandas as pd
 
 nindex = 0
 tindex = 0
-tcategory = "Everything" #Elegir categoria
+tcategory = ["Medicine", "Energy"] #Elegir categoria
 
 # Everything
 # Engineering
@@ -35,18 +35,19 @@ df = pd.read_excel(path)
 
 for cat in df["English Package Name"].unique():
     try:
-        os.mkdir(pre + "/download/" + tcategory) if tcategory != "Everything" else os.mkdir(pre + "/download/" + cat)
+        for tcat in tcategory:
+             os.mkdir(pre + "/download/" + tcat) if tcategory != "Everything" else os.mkdir(pre + "/download/" + cat)
     except OSError as error:
         break
 
 for index, row in df.iterrows():
      category = row.loc["English Package Name"]
-     if category == tcategory or tcategory == "Everything":      
+     if category in tcategory or  "Everything" in tcategory:      
          nindex = nindex+1
 
 for index, row in df.iterrows():
         category = row.loc["English Package Name"]
-        if category == tcategory or tcategory == "Everything":        
+        if category in tcategory or  "Everything" in tcategory:        
             file_name = f"{row.loc['Book Title']}_{row.loc['Edition']}".replace('/','-').replace(':','-')
             url = f"{row.loc['OpenURL']}"
             r = requests.get(url) 

@@ -39,7 +39,7 @@ pathd = pre + "/download/"
 for cat in df["English Package Name"].unique():
     try:
         for tcat in tcategory:
-             os.mkdir(pathd + tcat) if tcategory != "Everything" else os.mkdir(pathd + cat)
+             os.mkdir(pathd + tcat) if  "Everything" not in tcategory else os.mkdir(pathd + cat)
     except OSError as error:
         break
 

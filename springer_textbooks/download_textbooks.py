@@ -1,5 +1,7 @@
 import wget, requests, os 
 import pandas as pd
+from os import listdir
+from os.path import isfile, join
 
 nindex = 0
 tindex = 0
@@ -32,19 +34,23 @@ pre = os.path.dirname(os.path.realpath(__file__))
 fname = 'Free+English+textbooks.xlsx'
 path = os.path.join(pre, fname)
 df = pd.read_excel(path)
+pathd = pre + "/download/"
 
 for cat in df["English Package Name"].unique():
     try:
         for tcat in tcategory:
-             os.mkdir(pre + "/download/" + tcat) if tcategory != "Everything" else os.mkdir(pre + "/download/" + cat)
+             os.mkdir(pathd + tcat) if tcategory != "Everything" else os.mkdir(pathd + cat)
     except OSError as error:
         break
 
 for index, row in df.iterrows():
      category = row.loc["English Package Name"]
      if category in tcategory or  "Everything" in tcategory:      
-         nindex = nindex+1
-
+         file_name = f"{row.loc['Book Title']}_{row.loc['Edition']}".replace('/','-').replace(':','-')
+         files = [f for f in listdir(pathd + category) if isfile(join(pathd + category, f))]
+         if file_name + ".pdf" not in files: 
+                nindex = nindex+1
+                
 for index, row in df.iterrows():
         category = row.loc["English Package Name"]
         if category in tcategory or  "Everything" in tcategory:        
@@ -52,6 +58,8 @@ for index, row in df.iterrows():
             url = f"{row.loc['OpenURL']}"
             r = requests.get(url) 
             download_url = f"{r.url.replace('book','content/pdf')}.pdf"
-            wget.download(download_url, pre + "/download/" + category +"/" + file_name + ".pdf") 
-            tindex = tindex+1
-            print(f"downloading {file_name}.pdf Complete .... {tindex}/{nindex}")
+            files = [f for f in listdir(pathd + category) if isfile(join(pathd + category, f))]
+            if file_name + ".pdf" not in files: 
+                wget.download(download_url, pathd + category +"/" + file_name + ".pdf") 
+                tindex = tindex+1
+                print(f"downloading {file_name}.pdf Complete .... {tindex}/{nindex}")

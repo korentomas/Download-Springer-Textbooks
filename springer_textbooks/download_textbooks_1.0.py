@@ -5,30 +5,36 @@ from os.path import isfile, join
 
 nindex = 0
 tindex = 0
-tcategory = ["Medicine", "Energy"] #Elegir categoria
+categories = [
+"Engineering",
+"Humanities, Social Sciences and Law",
+"Mathematics and Statistics",
+"Behavioral Science",
+"Biomedical and Life Sciences",    
+"Chemistry and Materials Science",
+"Medicine",
+"Business and Economics",
+"Earth and Environmental Science",
+"Physics and Astronomy",
+"Computer Science",
+"Behavioral Science and Psychology",
+"Energy",
+"Business and Management",
+"Religion and Philosophy",
+"Economics and Finance",
+"Education",
+"Law and Criminology",
+"Social Sciences",
+"Literature, Cultural and Media Studies",
+"Intelligent Technologies and Robotics",
+"Everything"
+]
 
-# Everything
-# Engineering
-# Humanities, Social Sciences and Law
-# Mathematics and Statistics
-# Behavioral Science
-# Biomedical and Life Sciences       
-# Chemistry and Materials Science    
-# Medicine
-# Business and Economics
-# Earth and Environmental Science
-# Physics and Astronomy
-# Computer Science
-# Behavioral Science and Psychology
-# Energy
-# Business and Management
-# Religion and Philosophy
-# Economics and Finance
-# Education
-# Law and Criminology
-# Social Sciences
-# Literature, Cultural and Media Studies
-# Intelligent Technologies and Robotics
+print (*categories, sep = "\n")
+print()
+input_string = input("Enter a list of categories separated by semicolon: ")
+tcategory = input_string.split(";")
+tcategory = [x.strip(' ') for x in tcategory]
 
 pre = os.path.dirname(os.path.realpath(__file__))
 fname = 'Free+English+textbooks.xlsx'
@@ -60,6 +66,8 @@ for index, row in df.iterrows():
             download_url = f"{r.url.replace('book','content/pdf')}.pdf"
             files = [f for f in listdir(pathd + category) if isfile(join(pathd + category, f))]
             if file_name + ".pdf" not in files: 
-                wget.download(download_url, pathd + category +"/" + file_name + ".pdf") 
                 tindex = tindex+1
-                print(f"downloading {file_name}.pdf Complete .... {tindex}/{nindex}")
+                print(f"Downloading {file_name}.pdf")
+                wget.download(download_url, pathd + f"{category}/{file_name}.pdf")
+                print(f" Complete .... {tindex}/{nindex}")
+                print(" ")

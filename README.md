@@ -3,7 +3,7 @@ We found out that Springer Publishing, a publisher specializing in books and aca
 
 We wanted to automatize the download for all textbooks so we decided to program an algortihm in python but we googled it and realized that **Joe T. Santhanavanich** published an article where he did this. In the comments we also found that **[@juanluisrto](https://gist.github.com/juanluisrto)** made some code to categorize the already downloaded files.
 
-# NO PYTHON NEEDED
+# NO PYTHON NEEDED. YOU CAN USE AN EXECUTABLE FILE! :D
 
 ![The executable](https://i.imgur.com/VFkqpjA.jpg)
 

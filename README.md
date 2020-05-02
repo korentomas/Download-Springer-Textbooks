@@ -1,3 +1,5 @@
+Leer en [Español](https://github.com/korentomas/Download-Springer-Textbooks/blob/master/READMEspanish.md)
+
 # Download Springer textbooks by category
 We found out that Springer Publishing, a publisher specializing in books and academic journals, released more than 400 publications due to the global context. We thought this was great and wanted to contribute in our own way.
 

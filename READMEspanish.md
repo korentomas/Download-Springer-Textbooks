@@ -1,6 +1,6 @@
-Read in [English](https://github.com/korentomas/Download-Springer-Textbooks). 
+**Read in [English](https://github.com/korentomas/Download-Springer-Textbooks).**
 
-# Descargar los libros de texto de Springer por categoría
+# Descargar los libros de Springer según la categoría
 Descubrimos que la editorial Springer, especializada en libros y revistas académicas, liberó más de 400 publicaciones debido al contexto mundial. Pensamos que esto era genial y quisimos contribuir a nuestra manera.
 
 Queríamos automatizar la descarga de todos los libros de texto, así que decidimos programar un algoritmo en Python, pero lo buscamos en Google y nos dimos cuenta de que **Joe T. Santhanavanich** publicó un artículo en el que hacía esto. En los comentarios también encontramos que **[@juanluisrto](https://gist.github.com/juanluisrto)** hizo un código para categorizar los archivos ya descargados.

@@ -26,7 +26,7 @@ Lo que nuestro programa hace es sólo para descargar las categorías que le inte
 ![Descargar ZIP](https://i.imgur.com/nXGislt.jpg)
 
 
-2. Así es como debería ser la carpeta "libros_de_texto_de_primavera". Ejecuta "download_textbooks_1.0.exe".
+2. Así es como debería verse la carpeta "springer_textbooks". Ejecuta "download_textbooks_1.0.exe".
 
 ![Carpeta](https://i.imgur.com/IxBhbyO.jpg)
 
@@ -37,7 +37,7 @@ Lo que nuestro programa hace es sólo para descargar las categorías que le inte
 ![Run Anyway](https://i.imgur.com/HL3utuE.jpg)
 
 
-4. Así que esta es la terminal. Si esto no se ve bien en su computadora, por favor envíenos un mensaje.
+4. Así que esta es la terminal... Si esto no se ve bien en su computadora, por favor envíenos un mensaje.
 
 ![La terminal](https://i.imgur.com/gLvVeyv.jpg)
 
@@ -47,7 +47,7 @@ Lo que nuestro programa hace es sólo para descargar las categorías que le inte
 ![Categorías](https://i.imgur.com/KzCz5TB.jpg)
 
 
-6. ¡Están todos listos! Sus archivos comenzarán a descargarse y cuando termine puede cerrar la terminal!
+6. ¡Todo está listo! Sus archivos comenzarán a descargarse y cuando termine, puede cerrar la terminal.
 
 ![Descargando](https://i.imgur.com/XxpSNuf.jpg)
 

@@ -10,6 +10,7 @@ Queríamos automatizar la descarga de todos los libros de texto, así que decidi
 
 ![El ejecutable](https://i.imgur.com/VFkqpjA.jpg)
 
+Si querés correr el archivo .py directamente vas a necesitar instalar las siguientes liberias: wget, requests, xlrd and pandas. 
 
 Lo que nuestro programa hace es sólo para descargar las categorías que le interesan al usuario + hemos añadido algunas funciones:
 - **Tiene un archivo EXE para que cualquiera pueda descargar los libros sin tener que instalar Python!**

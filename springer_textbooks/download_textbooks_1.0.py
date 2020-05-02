@@ -1,4 +1,4 @@
-import wget, requests, os 
+import wget, requests, os
 import pandas as pd
 from os import listdir
 from os.path import isfile, join
@@ -33,6 +33,7 @@ categories = [
 print (*categories, sep = "\n")
 print()
 input_string = input("Enter a list of categories separated by semicolon: ")
+print(" ")
 tcategory = input_string.split(";")
 tcategory = [x.strip(' ') for x in tcategory]
 
@@ -64,10 +65,17 @@ for index, row in df.iterrows():
             url = f"{row.loc['OpenURL']}"
             r = requests.get(url) 
             download_url = f"{r.url.replace('book','content/pdf')}.pdf"
+            r = requests.head(download_url)
+            header = r.headers
+            content_type = header.get('content-type')   
             files = [f for f in listdir(pathd + category) if isfile(join(pathd + category, f))]
             if file_name + ".pdf" not in files: 
                 tindex = tindex+1
-                print(f"Downloading {file_name}.pdf")
-                wget.download(download_url, pathd + f"{category}/{file_name}.pdf")
-                print(f" Complete .... {tindex}/{nindex}")
+                if content_type=="application/pdf": 
+                    print(f"Downloading {file_name}.pdf")
+                    wget.download(download_url, pathd + f"{category}/{file_name}.pdf")
+                    print(f" Complete .... {tindex}/{nindex}")
+                else:
+                    print(f"{file_name} no longer available")
+                    nindex=nindex-1
                 print(" ")

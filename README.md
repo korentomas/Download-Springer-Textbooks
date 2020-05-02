@@ -10,6 +10,7 @@ We wanted to automatize the download for all textbooks so we decided to program 
 
 ![The executable](https://i.imgur.com/VFkqpjA.jpg)
 
+If you want to run the .py file directly you'll need to install the following libraries: wget, requests, xlrd and pandas. 
 
 What our program does is only to download the categories the user is interested in + we added a few functions:
 - **It has an EXE file so anyone can download the books without having to install Python!**

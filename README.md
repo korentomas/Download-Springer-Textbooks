@@ -15,6 +15,39 @@ What our program does is only to download the categories the user is interested 
 - The user can see how many files have been downloaded out of the total.
 - We have intended to make the code more user-friendly but we are still working on it.
 
+# INSTRUCTIONS
+
+1. Download the ZIP
+
+![Download ZIP](https://i.imgur.com/nXGislt.jpg)
+
+
+2. This is what the folder "spring_textbooks" should look like
+
+![Folder](https://i.imgur.com/IxBhbyO.jpg)
+
+
+3. Oops, Windows will detect this as not safe (you can check the python files and you'll see everything is in order). You can fix this by pressing More Info then Run anyway
+
+![Oops](https://i.imgur.com/mZQzJTR.jpg)
+![Run Anyway](https://i.imgur.com/HL3utuE.jpg)
+
+
+4. So this is the terminal. If this doesn't look right in your computer please send us a message!
+
+![The terminal](https://i.imgur.com/gLvVeyv.jpg)
+
+
+5. Choose which categories you wish to download
+
+![Categories](https://i.imgur.com/KzCz5TB.jpg)
+
+
+6. You are all set! Your files will start to download and when it finishes you can just close the terminal!
+
+![Downloading](https://i.imgur.com/XxpSNuf.jpg)
+
+
 # Sources:
 
 **Joe T. Santhanavanich**

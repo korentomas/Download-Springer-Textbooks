@@ -36,7 +36,7 @@ input_string = input("Enter a list of categories separated by semicolon: ")
 tcategory = input_string.split(";")
 tcategory = [x.strip(' ') for x in tcategory]
 
-pre = os.path.dirname(os.path.realpath(__file__))
+pre = os.path.dirname(os.path.realpath('__file__'))
 fname = 'Free+English+textbooks.xlsx'
 path = os.path.join(pre, fname)
 df = pd.read_excel(path)

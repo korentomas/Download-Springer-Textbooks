@@ -22,7 +22,7 @@ What our program does is only to download the categories the user is interested 
 ![Download ZIP](https://i.imgur.com/nXGislt.jpg)
 
 
-2. This is what the folder "spring_textbooks" should look like
+2. This is what the folder "spring_textbooks" should look like. Run "download_textbooks_1.0.exe".
 
 ![Folder](https://i.imgur.com/IxBhbyO.jpg)
 
